@@ -128,3 +128,44 @@ while (contador <= 10) {
     console.log("O termo do contador é " + contador);
     contador++;
 }
+
+# Funções
+
+- Evitar repetições de códigos.
+- Realizar chamadas dinâmicas de algoritmos.
+
+function myFunction(parametros) {
+    
+}
+
+### Exemplo - cálculo de média de notas:
+
+function calcularMedia(notas) {
+
+	var somaNotas = 0;
+	for (c = 0; c < notas.length; c++) {
+	somaNotas += notas[c];
+	}
+  
+  media = somaNotas / notas.length;
+  return media;
+}
+
+function aprovacao(notas) {
+
+	let media = calcularMedia(notas);
+	let condicao = media >= 7 ? "aprovado" : "reprovado";	
+  return 'Média: ' + media + ' - Aluno ' + condicao;
+}
+
+console.log(aprovacao([10, 8, 6]))
+
+console.log(aprovacao([5, 4, 7]))
+
+## Formulários
+- Precisamos evitar que o usuário passe dados incorretos
+- Ou seja: direcionar o melhor uso do sistema
+-  Proteger a injeção de código malicioso
+- Evitar erros de processamento
+- Formatar dados para facilitar processamento
+- Regex -> expressões regulares
